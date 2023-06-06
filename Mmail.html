@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+	let mail = "vedeshkompella@gmail.com"
+	var digits = '0123456789';
+	let OTP = '';
+	for (let i = 0; i < 6; i++ ) {
+		OTP += digits[Math.floor(Math.random() * 10)];
+	}					
+	function sendEmail() {
+
+	Email.send({
+	SecureToken: "0348afa5-f95b-42b2-b9bf-ab78274e0050 ",
+	
+	To : mail,
+	From : "legendtonystark1@gmail.com",
+	Subject : 'OTP',
+	Body : OTP ,
+	})
+	 .then(
+	 );
+	 var x = prompt("Please Enter OTP sent to your Email To verify:", "000000");
+	 if (x == "000000") {
+	 	x = prompt("Please Enter OTP sent to your Email To verify, it's necessary:", "000000");
+	  }
+	 if (x== OTP) {
+	 	alert("success");
+	  } else {
+	 	alert("fail");
+	  }
+}
+	</script>
+</head>
+
+<body>
+<form method="post">
+	<p>Please check all folders
+	</p>
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>

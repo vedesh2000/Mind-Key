@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+
+	let mail = localStorage.getItem("saiemail")
+	//alert(mail);
+	//let mail = "anilvarma97989393@gmail.com"
+	var digits = '0123456789';
+	let OTP = '';
+	for (let i = 0; i < 6; i++ ) {
+		OTP += digits[Math.floor(Math.random() * 10)];
+	}					
+	function sendEmail() {
+
+	Email.send({
+	SecureToken: "8c1ab678-8e1e-4150-a949-20368f7e88d3",
+	// Username : "legendtonystark1@gmail.com",
+	// Password : "vEDESH@2000",
+	To : mail,
+	From : "legendtonystark1@gmail.com",
+	Subject : 'OTP',
+	Body : OTP ,
+	})
+	 .then(
+	 );
+	 var x = prompt("Please Enter OTP sent to your Email To verify:", "000000");
+	 if (x == "000000") {
+	 	x = prompt("Please Enter OTP sent to your Email To verify, it's necessary:", "000000");
+	  }
+	 if (x== OTP) {
+	 	alert("success");
+		window.open("reset.html");
+	  } else {
+	 	alert("fail");
+		 window.open("welcome.html");
+	  }
+}
+	</script>
+</head>
+
+<body>
+<form method="post">
+	<p>Please check spam also
+	</p>
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html>
+<head>
+	<title>NITAP</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<style>
+	.container {
+	  height: 200px;
+	  position: relative;
+	  border: 3px solid green;
+	}
+
+	.vertical-center {
+	  margin: 0;
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+        table{opacity:0.9;}
+	body,h1 {font-family: "Raleway", sans-serif}
+	body, html {height: 100%}
+	.bgimg {
+	  background-image: url('bg.jpg');
+	  opacity:0.5;
+	  min-height: 100%;
+	  background-position: center;
+	  background-size: cover;
+	}
+	</style>
+	<script type="text/javascript">
+	function sample() {
+		
+		var image1=localStorage.getItem("sai1");
+		var image2=localStorage.getItem("sai2");
+		var image3=localStorage.getItem("sai3");
+		var image4=localStorage.getItem("sai4");
+		var image5=localStorage.getItem("sai5");
+		var image6=localStorage.getItem("sai6");
+		var image7=localStorage.getItem("sai7");
+		var image8=localStorage.getItem("sai8");
+		var image9=localStorage.getItem("sai9");
+		
+		var a= document.getElementById("a");
+		a.src=image1;
+		var b= document.getElementById("b");
+		b.src=image2;
+		var c= document.getElementById("c");
+		c.src=image3;
+		var d= document.getElementById("d");
+		d.src=image4;
+		var e= document.getElementById("e");
+		e.src=image5;
+		var f= document.getElementById("f");
+		f.src=image6;
+		var g= document.getElementById("g");
+		g.src=image7;
+		var h= document.getElementById("h");
+		h.src=image8;
+		var i= document.getElementById("i");
+		i.src=image9;
+		
+			 
+	 }
+	 function onClick(element){
+	          var k=element.src;
+	          var z='';
+	          for (var i=17;i<k.length;i++){
+	              z+=k[i];
+	          }
+	          localStorage.setItem("skd",z);
+	          window.open("fit2.html");
+	 }
+      function upload(){
+			window.open("mailing(otp).html")
+
+	  }
+      </script>
+	 
+	 
+	
+
+</head>
+<body>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge" id="21">
+  </div>
+  <div class="w3-display-middle">
+	<span id="user">Username:</span>
+	<button name="RETREIVE" onclick="sample()"></button>
+	<button onclick="upload()">Forgot Password?</button>
+	<table>
+	<tbody>
+	<tr>
+	<td>
+	
+	<img id="a" width = "150" height="150" onclick="onClick(this)">
+	
+	</td>
+	<td>
+	<img id="b" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="c" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<img id="d" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="e" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="f" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<img id="g" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="h" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="i" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	
+</body>
+
+</html>

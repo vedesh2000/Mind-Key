@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('bg.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+
+#wrapper {
+
+  display:flex;
+  flex-wrap:wrap;
+  
+ 
+
+ 
+   
+}
+#ee {
+height:400 px;
+width: 400 px;
+
+
+}
+.splitImg {
+ 
+ 
+  padding: 1px;
+  background-clip: content-box;
+  background-repeat: no-repeat;
+}
+.fanil{
+    position:absolute;
+     top: 150px;
+     left:20%;
+     height:60%;
+     width:60%;
+     
+
+}
+td{
+    color:transparent;
+    border:1px solid grey;
+    height:20%;
+    width:20%;
+}
+
+</style>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script>
+    var count=4;
+    var k=2;
+    var password="";
+    function sample(id){
+        if(k>0&&count>0){
+				count--;
+				password+=id;
+				if(count==0){
+				
+                var  passwor = password;
+				 var kk=localStorage.getItem("ram");
+				 var imagek=localStorage.getItem("skd");
+				
+$.post('xyzt.php', {'username':kk,'signin':imagek,'passwordq':passwor}, function(response){
+	
+alert(response);
+if(response=="Username/password is incorrect."){
+    count=4;
+    k--;
+    password="";
+    alert('Reenter password '+k+' attempts left');
+    if(k==0) {
+    alert("You are left with 0 attempts");
+    
+    $.post('final.php',{'username':kk},function(response){
+           var k=response;
+           var x = Date()
+    Email.send({
+	SecureToken: "8c1ab678-8e1e-4150-a949-20368f7e88d3",
+	To : k,
+	From : "legendtonystark1@gmail.com",
+	Subject : 'Suspicious attack',
+	Body : "Suspect attack happened, Increase security by changing password is advised"+x,
+	})
+	 .then(
+	 );
+    });
+    window.open("welcome.html");
+   
+}	
+}
+else{
+    localStorage.setItem("accuser",kk);
+    window.open("account.html");
+}
+
+
+});
+}
+}	
+	
+    }
+			
+</script>
+</head>
+<body>
+
+
+    <img id="10" class ="fanil">
+
+<table class="fanil" id="2" > 
+    <tbody>
+        <tr>
+            <td id="00" onclick="sample(this.id)">
+             anil
+            </td>
+            <td id="01" onclick="sample(this.id)">
+                vedesh
+            </td>
+            <td id="02" onclick="sample(this.id)">
+                 fithin
+            </td>
+        </tr>
+        <tr>
+            <td id="10" onclick="sample(this.id)">
+                anil
+               </td>
+               <td id="11" onclick="sample(this.id)">
+                   vedesh
+               </td>
+               <td id="12" onclick="sample(this.id)">
+                    fithin
+               </td>
+        </tr>
+        <tr>
+            <td id="20" onclick="sample(this.id)">
+                anil
+               </td>
+               <td id="21" onclick="sample(this.id)">
+                   vedesh
+               </td>
+               <td id="22" onclick="sample(this.id)">
+                    fithin
+               </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script type="text/javascript">
+var i=document.getElementById("10");
+  var imagek=localStorage.getItem("skd");
+  
+i.src=imagek;
+
+	
+	
+
+
+
+
+</script>
+
+
+</body>
+</html>
+

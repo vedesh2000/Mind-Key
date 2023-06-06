@@ -1,0 +1,11 @@
+4.html prev
+
+
+function onClick(element){
+	          localStorage.setItem("resetaval",element.src);
+	          window.open("resetfit.html");
+	 }
+	 function upload(){
+	 	window.open("resetzk.html");
+	 
+	 }

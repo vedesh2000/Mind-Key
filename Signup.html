@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>Signup</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('bg.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script type = "text/javascript">
+	function data(){
+	let client_id = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	let query = document.getElementById("1name").value;
+	//alert(query);
+	let url = "https://api.unsplash.com/search/photos/?client_id="+client_id+"&per_page=1&query="+query;
+	fetch(url)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+		//alert("N");
+			console.log(data)
+			// data = JSON.parse(data);
+			data.results.forEach(photo => {
+			
+				let result1= `${photo.links.download}`;
+				//alert(result);
+				localStorage.setItem("valuez",result1);			
+			});
+		}); 
+		//Second image
+		let query1 = document.getElementById("2name").value;
+		//alert(query1);
+	let url1 = "https://api.unsplash.com/search/photos/?client_id="+client_id+"&per_page=1&query="+query1;
+	fetch(url1)
+	
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+		
+			console.log(data)
+			// data = JSON.parse(data);
+			data.results.forEach(photo => {
+			
+				let resultb= `${photo.links.download}`;
+				
+				localStorage.setItem("valuey",resultb);			
+			});
+		});
+
+                //Third image
+                
+               let query2 = document.getElementById("3name").value;
+		//alert(query2);
+	let url2 = "https://api.unsplash.com/search/photos/?client_id="+client_id+"&per_page=1&query="+query2;
+	fetch(url2)
+	
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+		
+			data.results.forEach(photo => {
+			
+			   
+				
+				let resultf= `${photo.links.download}`;
+				//alert(resultf);
+				localStorage.setItem("valuet",resultf);			
+			});
+		});
+                
+                
+                
+		//var a=document.getElementById("1name").value;
+		//var b=document.getElementById("2name").value;
+		//var c=document.getElementById("3name").value;
+		var d = document.getElementById("uname").value;
+		var e = document.getElementById("email").value;
+		localStorage.setItem("valueu",d);
+		localStorage.setItem("emaila",e);
+		//localStorage.setItem("value1",a);
+		//localStorage.setItem("value2",b);
+		//localStorage.setItem("value3",c);
+		//var k="12";
+		//alert(k);
+		window.open("Mmail.html");
+		
+		
+	}
+</script>
+<body>
+
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+ 
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Form</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">
+    <form method = "post" id="a" >
+	<label>Username<br/>
+	<input type= "text" name="username" id="uname" placeholder="Mandatory field " required>
+	</label><br/>
+	<label>Email<br/>
+		<input type= "text" name="Email" id="email" placeholder="Mandatory field. Please enter correct email" required>
+	</label><br/>
+	<label>Questions<br/>
+	<select>
+	<option select ="selected">select</option></br>
+	<option>What is your native place?</option>
+	<option>What is your favourite vehicle?</option></br>
+	<option>What is your favourite food?</option></br>
+	<option>What is your favourite hill station?</option></br>
+	<option>Where did you study B.Tech?</option></br>
+	</select>
+	<input type= "text" name="username" id="1name"></br>
+	<select>
+	<option select ="selected">select</option></br>
+	<option>What is your native place?</option>
+	<option>What is your favourite vehicle?</option></br>
+	<option>What is your favourite food?</option></br>
+	<option>What is your favourite hill station?</option></br>
+	<option>Where did you study B.Tech?</option></br>
+	</select>
+	<input type= "text" name="username" id="2name"></br>
+	<select>
+	<option select ="selected">select</option></br>
+	<option>What is your native place?</option>
+	<option>What is your favourite vehicle?</option></br>
+	<option>What is your favourite food?</option></br>
+	<option>What is your favourite hill station?</option></br>
+	<option>Where did you study B.Tech?</option></br>
+	</select>
+	<input type= "text" name="username" id="3name"></br>
+	<input type="button" value="Submit" onclick="data()">
+	</form></p>
+  </div>
+  <div class="w3-display-bottomright w3-padding-large" >
+
+  </div>
+</div>
+
+</body>
+</html>

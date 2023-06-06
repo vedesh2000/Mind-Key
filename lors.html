@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<title>Entrance</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+.container {
+  height: 200px;
+  position: relative;
+  border: 3px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('bg.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+.button {
+  margin: 800px;
+  display: inline-block;
+  background-image: url('bg.jpg');
+  border: green;
+  border-radius: 12px;
+  color:  white;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.left {
+  left: 0;
+  background-color: #ffebcd;
+}
+
+.right {
+  right: 0;
+  background-color: skyblue;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+</style>
+</style>
+<body>
+
+<div class="split left">
+  <div class="centered">
+    <img src="man.jpg" alt="Login">
+    <h2 >Login</h2>
+    <p>Hello, Welcome Dear</p>
+    <button class = "button"><a href = "loginn.php">Login</a></button>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    <img src="baby.jpg" alt="Avatar man">
+    <h2>Signup</h2>
+    <p>Hey, This is not yet late hurryup</p>
+    <button class = "button"><a href = "Signup.html">Signup</a></button>
+  </div>
+</div>
+
+</body>
+</html>

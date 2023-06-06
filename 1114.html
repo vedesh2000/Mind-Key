@@ -1,0 +1,26 @@
+<html>
+<head>
+<script type="text/javascript">
+    function opent(){
+    window.open("nextt.html");
+    }
+</script>
+
+
+</head>
+<body>
+<input type="file" onchange="loadFile(event)"><br>
+<img src="" height="200" alt="Image preview..." id="output" onclick="opent()">
+<img src="" height="200" alt="Image preview..." id="outpu" onclick="opent()">
+<script type="text/javascript">
+ 
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+      
+    localStorage.setItem("ddd",image.src);
+    
+};
+</script>
+</body>
+</html>

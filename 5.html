@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+<head>
+	<title>NITAP</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+	<style>
+	.container {
+	  height: 200px;
+	  position: relative;
+	  border: 3px solid green;
+	}
+
+	.vertical-center {
+	  margin: 0;
+	  position: absolute;
+	  top: 50%;
+	  transform: translateY(-50%);
+	}
+
+	body,h1 {font-family: "Raleway", sans-serif}
+	body, html {height: 100%}
+	.bgimg {
+	  background-image: url('bg.jpg');
+	  min-height: 100%;
+	  background-position: center;
+	  background-size: cover;
+	}
+	</style>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript">
+	function sample() {
+		document.getElementById("21").innerHTML=localStorage.getItem("valueu");
+		var image1=localStorage.getItem("reseta");
+		var image2=localStorage.getItem("resetb");
+		var image3=localStorage.getItem("resetc");
+        var image4=localStorage.getItem("resetuploadpath");
+		var a= document.getElementById("a");
+		//a.src='Images/'+image1+'.jpeg';
+		a.src = image1;
+		let client_id = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url = "https://api.unsplash.com/search/photos/?client_id="+client_id+"&per_page=100&query=places";
+	let randomNumber = Math.floor(Math.random()*30);
+	fetch(url)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			var i=0;
+			
+			let res = data.results[randomNumber];
+			
+			let resulta = res.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)
+			var b= document.getElementById("b");
+		b.src=resulta;
+		localStorage.setItem("rlinkb",b.src);
+			
+			});
+		
+			let client_id1 = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url1 = "https://api.unsplash.com/search/photos/?client_id="+client_id1+"&per_page=100&query=places";
+	let randomNumber1 = Math.floor(Math.random()*30);
+	fetch(url1)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			//var i=0;
+			
+			let res1 = data.results[randomNumber1];
+			
+			let resulta1 = res1.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)
+			var c= document.getElementById("c");
+		c.src=resulta1;
+		localStorage.setItem("rlinkc",c.src);
+			
+			});
+			let client_id2= "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url2 = "https://api.unsplash.com/search/photos/?client_id="+client_id2+"&per_page=100&query=places";
+	let randomNumber2 = Math.floor(Math.random()*30);
+	fetch(url2)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			//var i=0;
+			
+			let res2 = data.results[randomNumber2];
+			
+			let resulta2 = res2.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)
+			var d= document.getElementById("d");
+		d.src=resulta2;
+		localStorage.setItem("rlinkd",d.src);
+			
+			});
+			/*let client_id3 = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url3 = "https://api.unsplash.com/search/photos/?client_id="+client_id3+"&per_page=100&query=places";
+	let randomNumber3 = Math.floor(Math.random()*30);
+	fetch(url3)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			var i=0;
+			
+			let res3 = data.results[randomNumber3];
+			
+			let resulta3 = res3.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)*/
+			var f= document.getElementById("f");
+		f.src=image4;
+		localStorage.setItem("rlinkf",f.src);
+			
+			
+			let client_id4 = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url4= "https://api.unsplash.com/search/photos/?client_id="+client_id4+"&per_page=100&query=places";
+	let randomNumber4 = Math.floor(Math.random()*30);
+	fetch(url4)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			//var i=0;
+			
+			let res4 = data.results[randomNumber4];
+			
+			let resulta4 = res4.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)
+			var h= document.getElementById("h");
+		h.src=resulta4;
+		localStorage.setItem("rlinkh",h.src);
+			
+			});
+			let client_id5 = "cdNXdaYfHy4vHt6GpXjJd8AcYjTOI6EZMxB6Xf9LUx8";
+	//let query = document.getElementById("search").value;
+	let url5 = "https://api.unsplash.com/search/photos/?client_id="+client_id5+"&per_page=100&query=places";
+	let randomNumber5 = Math.floor(Math.random()*30);
+	fetch(url5)
+		.then(function(data){
+			return data.json();
+		})
+		.then(function(data){
+			console.log(data)
+			// data = JSON.parse(data);
+			var i=0;
+			
+			let res5 = data.results[randomNumber5];
+			
+			let resulta5 = res5.links.download;
+			// data.results.forEach(photo => {
+			// 	let result = `
+			// 		<img src="${photo.urls.regular}"/>
+			// 		<a href="${photo.links.download}" id='${i}'>
+			// 	`;
+			// 	i = i+1;
+			// 	document.getElementById("result").append(result)
+			var i= document.getElementById("i");
+		i.src=resulta5;
+		localStorage.setItem("rlinki",i.src);
+			
+			});
+		
+		//var c= document.getElementById("c");
+		//c.src='Images/Bike.jpeg';
+		/*var d= document.getElementById("d");
+		d.src='Images/Q.jpeg';*/
+		var e= document.getElementById("e");
+		e.src=image2;
+		/*var f= document.getElementById("f");
+		f.src='Images/Indianfood.jpeg';*/
+		var g= document.getElementById("g");
+		g.src=image3;
+		/*var h= document.getElementById("h");
+		h.src='Images/Car.jpeg';
+		var i= document.getElementById("i");
+		i.src='Images/Jammu.jpeg';
+		*/
+		localStorage.setItem("rlinka",a.src);
+		
+		
+		
+		localStorage.setItem("rlinke",e.src);
+		
+		localStorage.setItem("rlinkg",g.src);
+		
+		
+			 
+	 var sa=localStorage.getItem("rlinka");
+		var sb=localStorage.getItem("rlinkb");
+		var sc=localStorage.getItem("rlinkc");
+		var sd=localStorage.getItem("rlinkd");
+		var se=localStorage.getItem("rlinke");
+		var sf=localStorage.getItem("rlinkf");
+		var sg=localStorage.getItem("rlinkg");
+		var sh=localStorage.getItem("rlinkh");
+		var si=localStorage.getItem("rlinki");
+		var su=localStorage.getItem("accuser");
+		//alert(sa);
+		$.post('5resetMove.php',{'user':su,'ua':sa,'ub':sb,'uc':sc,'ud':sd,'ue':se,'uf':sf,'ug':sg,'uh':sh,'ui':si},function(response){});
+		
+			 
+	 }
+	 function Just(){
+	        
+	        window.open("Just.php");
+	 
+	 
+	 }
+	 function onClick(element){
+	          localStorage.setItem("resetaval",element.src);
+	          var jk=element.id;
+	          var uk=localStorage.getItem("accuser");
+	          $.post('Just.php',{'user':uk,'id':jk},function(response){});
+	          
+	          window.open("rfit.html");
+	 }
+	 function upload(){
+	 	window.open("rzk.html");
+	 
+	 }
+      </script>
+	 
+	 
+	
+
+</head>
+<body>
+	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge" id="21">
+  </div>
+  <div class="w3-display-middle">
+	<span id="user">Username:</span>
+	<button name="RETREIVE" onclick="sample()"></button>
+	<button onclick="upload()">Upload</button>
+	<table id="tta">
+	<tbody>
+	<tr>
+	<td>
+	
+	<img id="a" width = "150" height="150" onclick="onClick(this)">
+	
+	</td>
+	<td>
+	<img id="b" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="c" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<img id="d" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="e" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="f" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	<tr>
+	<td>
+	<img id="g" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="h" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	<td>
+	<img id="i" width = "150" height="150" onclick="onClick(this)">
+	</td>
+	</tr>
+	</tbody>
+	</table>
+	</div>
+	
+	
+</body>
+
+</html>
